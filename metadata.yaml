@@ -3,7 +3,7 @@ name: ceph_test
 # Human-readable name for your plugin
 title: Title for ceph_test plugin
 # Plugin version
-version: '1.0.0'
+version: '1.0.2'
 # Description
 description: Please describe your plugin here
 # Required fuel version
