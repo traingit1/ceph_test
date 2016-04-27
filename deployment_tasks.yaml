@@ -3,8 +3,8 @@
 - id: ceph_test-deployment-puppet
   type: puppet
   groups: [ceph-osd]
-  required_for: [deploy_end]
-  requires: [override_configuration]
+  requires: [sync_time]
+  required_for: [copy_keys]
   parameters:
     puppet_manifest: ceph_test.pp
     puppet_modules: /etc/puppet/modules
