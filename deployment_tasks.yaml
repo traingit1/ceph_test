@@ -2,9 +2,9 @@
 # can specify new tasks for any roles, even built-in ones.
 - id: ceph_test-deployment-puppet
   type: puppet
-  role: [ceph-osd]
-  requires: [hiera]
+  groups: [ceph-osd]
   required_for: [deploy_end]
+  requires: [override_configuration]
   parameters:
     puppet_manifest: ceph_test.pp
     puppet_modules: /etc/puppet/modules
