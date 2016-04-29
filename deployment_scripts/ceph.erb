@@ -3,6 +3,7 @@ network_scheme:
   - action: add-br
     name: br-ceph
   - action: add-port
+    bridge: br-ceph
     name: enp0s7
   roles:
     ceph/public: br-storage
