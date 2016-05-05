@@ -1,4 +1,4 @@
-version: '1.0.5'
+version: '1.0.10'
 # Plugin name
 name: ceph_test
 # Human-readable name for your plugin

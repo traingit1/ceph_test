@@ -2,10 +2,20 @@
 # can specify new tasks for any roles, even built-in ones.
 - id: ceph_test-deployment-puppet
   type: puppet
-  role: [ceph-osd]
+  groups: [ceph-osd]
   required_for: [netconfig]
-#  requires: [globals]
+  requires: [globals]
   parameters:
     puppet_manifest: ceph_test.pp
     puppet_modules: /etc/puppet/modules
     timeout: 600
+- id: ceph_test_compute-deployment-puppet
+  type: puppet
+  groups: [compute]
+  required_for: [netconfig]
+  requires: [globals]
+  parameters:
+    puppet_manifest: ceph_test_compute.pp
+    puppet_modules: /etc/puppet/modules
+    timeout: 600
+
